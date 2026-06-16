@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "desc": "Água Azul",
+        "imagem": "../public/aguaazul.webp",
+        "valor": 250.00
+    },
+
+    {
+        "id": 2,
+        "desc": "Água Verde",
+        "imagem": "../public/aguaverde.webp",
+        "valor": 2.43
+    },
+
+    {
+        "id": 3,
+        "desc": "Água Vermelha",
+        "imagem": "../public/aguavermelha.webp",
+        "valor": 12.67
+    }
+
+]
