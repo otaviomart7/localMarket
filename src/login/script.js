@@ -31,3 +31,9 @@ function showPassword(){
         img_eye.setAttribute("src", "../../public/view.png")
     }
 }
+
+function fecharError(){
+        document.getElementById("errorModal").style.display = "none"
+        document.getElementById("nome").style.borderBottom = "none"
+        document.getElementById("senha").style.borderBottom = "none"
+}
