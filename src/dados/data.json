@@ -9,7 +9,7 @@
     {
         "id": 2,
         "desc": "Água Verde",
-        "imagem": "../public/aguaverde.webp",
+        "imagem": "../public/aguaverde.png",
         "valor": 2.43
     },
 

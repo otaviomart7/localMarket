@@ -22,19 +22,21 @@
 .error-div{
     display: none;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 200px;
+    width: 40%;
     height: auto;
     background-color: var(--errorbg);
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
     position: absolute;
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
     font-weight: lighter;
+    color: red;
+    top: 200px;
 }
 
 body{
@@ -73,4 +75,43 @@ body{
 .round{
     position: absolute;
     top: -50px;
+}
+
+.wrap-input-label{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.btn-login{
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.eye{
+    position: absolute;
+    right: 10px;
+    opacity: 0.4;
+    bottom: 5px;
+    transition: all 200ms ease-in-out;
+}
+
+
+.wrap-input-label input{
+    padding: 8px 0px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--pretoazul);
+    font-size: 18px;
+    color: var(--texto);
+}
+
+input::placeholder{
+    color: black;
+    opacity: 0.6;
 }
