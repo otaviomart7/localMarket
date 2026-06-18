@@ -53,8 +53,8 @@ body{
 .container{
     position: relative;
     background-color: var(--cinzaclaro);
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 450px;
     border: 2px solid var(--bege);
     display: flex;
     flex-direction: column;
@@ -83,14 +83,14 @@ body{
     align-items: left;
     text-align: left;
     position: relative;
-    width: 100%;
+    width: 90%;
 }
 
 .btn-login{
     border-radius: 10px;
     padding: 10px;
-    margin-top: 20px;
-    width: 100%;
+    margin-top: 40px;
+    width: 70%;
 }
 
 .eye{
@@ -114,4 +114,8 @@ body{
 input::placeholder{
     color: black;
     opacity: 0.6;
+}
+
+h1{
+    color: var(--cinzaescuro);
 }
