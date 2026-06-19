@@ -50,3 +50,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }).catch
 
 })
+
+
+
+document.getElementById("produtos-container").addEventListener("click", function(event){
+    const btn = event.target.closest(".adicionar")
+    if(!btn) return
+
+    const indexdoProduto = btn.dataset.indice
+    const produtoSelecionado = produtos[indexdoProduto]
+
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+    carrinho.push(produtoSelecionado)
+    localStorage.setItem("carrinho", JSON.stringify(carrinho))
+    alert("Produto Adicionado ao Carrinho!")
+})
