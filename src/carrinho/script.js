@@ -25,8 +25,23 @@ $(document).ready(function(){
         localStorage.setItem("carrinho", JSON.stringify(carrinho))
         exibirCarrinho()
     }
+
+        exibirCarrinho()
 })
 
-//gerar word
+function gerar(){
+    const listaElement = document.getElementById("lista")
+    const totalElement = document.getElementById("total")
+    const listaClone = listaElement.cloneNode(true)
+    $(listaClone).find("button").remove()
+    const listaHtml = listaClone.innerHTML
+    const totalHtml = totalElement.innerHTML
+    const conteudoHTML = `
+        <html>
+            <head>
+                <meta charset="UTF-8">
+            </head>
+    `
+}
 
 //succeses close
