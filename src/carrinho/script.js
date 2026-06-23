@@ -8,14 +8,14 @@ $(document).ready(function(){
         listElement.empty()
         let totalPreco = 0
         $.each(carrinho, function(index, item){
-            const listItem = $("<li>").text(`${item.desc} - Preço: $${item.preco.toFixed(2)}`)
+            const listItem = $("<li>").text(`${item.desc} - Preço: $${item.valor.toFixed(2)}`)
             const removeButton = $("button").text("✖️").css("margin-left", "10px").click(function(){
                 removerItem(index)
             })
             listItem.append(removeButton)
             listElement.append(listItem)
 
-            totalPreco += item.preco
+            totalPreco += item.valor
         })
         totalElement.text(`Total: $${totalPreco.toFixed(2)}`)
     }
@@ -41,7 +41,28 @@ function gerar(){
             <head>
                 <meta charset="UTF-8">
             </head>
+            <body>
+                <h1>PEDIDO CONFIRMADO</h1>
+                <h3>Agradecemos a sua compra e sua preferência.</h3>
+                <br>
+                ${listaHtml}
+                <br>
+                <br>
+                ${totalHtml}
+            </body>
+        </html>
     `
+
+    const blob = new Blob([conteudoHTML], {type: "aplication/nsword"})
+    const link = document.createElement("a")
+
+    link.href = URL.createObjectURL(blob)
+    link.download = "pedido.doc"
+    link.click()
+    document.getElementById("pedido").style.display = "block"
 }
 
-//succeses close
+
+function sucessClose(){
+    document.getElementById("pedido").style.display = "none"
+}
